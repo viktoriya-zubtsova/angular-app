@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Angular-App</title>
+</head>
+<body>
+    <my-app>Загрузка...</my-app>
+    <script>
+        function printComment(id) {
+            const commentsItem = document.getElementById(id);
+            let commentText = commentsItem.firstElementChild.value;
+            let commentAuthor = commentsItem.firstElementChild.nextElementSibling.value;
+          
+            let newP = document.createElement('p');
+
+            newP.innerHTML = `${commentText} ${commentAuthor}`; 
+            commentsItem.before(newP);
+        }
+    </script>
+</body>
+</html>
