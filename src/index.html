@@ -5,6 +5,21 @@
     <title>Angular-App</title>
 </head>
 <body>
+    <style>
+        form {
+            width: 60%;
+            margin: auto;
+        }
+        .input {
+            margin-right: 5px;
+        }
+        #comments {
+            padding-left: 23%;
+        }
+        .comment {
+            padding-left: 5%;
+        }
+    </style>
     <my-app>Загрузка...</my-app>
     <script>
         function printComment(id) {
@@ -14,7 +29,8 @@
           
             let newP = document.createElement('p');
 
-            newP.innerHTML = `${commentText} ${commentAuthor}`; 
+            newP.innerHTML = `${commentText} ${commentAuthor}`;
+            newP.classList.add('comment');
             commentsItem.before(newP);
         }
     </script>

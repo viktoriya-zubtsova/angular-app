@@ -6,6 +6,7 @@ import {formatDate} from '@angular/common';
     selector: 'my-app',
     template: `<form>
                     <input 
+                        class="input"
                         placeholder="Text"
                         type="text"
                         [(ngModel)]="textForm.text" 
@@ -13,14 +14,15 @@ import {formatDate} from '@angular/common';
                         name="text" 
                     />
                     <input 
+                        class="input"
                         placeholder="Author"
                         type="text" 
                         [(ngModel)]="textForm.author" 
                         required
                         name="author" 
                     />
-                    <p>Date: {{ myDate | date: 'dd.MM.yyyy' }}</p>
                     <button (click)="printForm()">Submit</button>
+                    <p>Date: {{ myDate | date: 'dd.MM.yyyy' }}</p>
                 </form>
                 <div id="comments"></div>`, 
 })
